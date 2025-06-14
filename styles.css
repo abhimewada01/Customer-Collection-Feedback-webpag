@@ -1,0 +1,187 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f8e1ff 0%, #ffe3e3 100%);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  padding: 24px 0 12px 0;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff69b4;
+  letter-spacing: 2px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 8px 32px;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.container {
+  max-width: 600px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #ff69b420, 0 1.5px 6px #0001;
+  margin-bottom: 32px;
+  padding: 32px 24px 24px 24px;
+}
+
+.form-title, .feedback-title {
+  margin-top: 0;
+  color: #ff69b4;
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+.star-rating {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+  justify-content: center;
+}
+
+.star-rating button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  transition: transform 0.1s;
+  border-radius: 50%;
+}
+
+.star-rating button.selected svg path {
+  fill: #ff69b4;
+}
+
+.star-rating button:focus {
+  outline: 2px solid #ff69b4;
+  transform: scale(1.15);
+}
+
+textarea {
+  width: 100%;
+  min-height: 60px;
+  border-radius: 8px;
+  border: 1.5px solid #ff69b4;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  resize: vertical;
+  transition: border 0.2s;
+}
+
+textarea:focus {
+  border: 2px solid #ff69b4;
+  outline: none;
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, #ff69b4 60%, #ffb347 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px #ff69b420;
+  margin: 0 auto;
+  display: block;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #ffb347 0%, #ff69b4 100%);
+  transform: scale(1.04);
+}
+
+.average-rating {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 18px;
+  font-size: 1.2rem;
+}
+
+.average-score {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ff69b4;
+}
+
+.average-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.feedback-list {
+  margin-top: 12px;
+}
+
+.feedback-item {
+  background: #fff6fa;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px #ff69b410;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  transition: box-shadow 0.2s;
+}
+
+.feedback-item:focus {
+  outline: 2px solid #ff69b4;
+  box-shadow: 0 2px 12px #ff69b420;
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.feedback-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.feedback-comment {
+  color: #444;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.no-feedback-msg {
+  text-align: center;
+  color: #aaa;
+  font-style: italic;
+  margin: 18px 0;
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

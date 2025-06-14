@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Customer Feedback Collection</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo" tabindex="0" aria-label="Feedback Collector Home Page">Feedback Collector</div>
+    </div>
+  </header>
+  <main class="container" role="main" aria-label="Customer Feedback Collection Application">
+
+    <section aria-labelledby="form-heading" class="card" role="region">
+      <h1 id="form-heading" class="form-title">Submit Your Feedback</h1>
+      <form id="feedbackForm" aria-describedby="form-desc" novalidate>
+        <div id="form-desc" class="sr-only">Form to submit your star rating and a short comment.</div>
+        <label for="rating">Rate Us (1 to 5 Stars)</label>
+        <div class="star-rating" role="radiogroup" aria-labelledby="rating" aria-describedby="rating-desc">
+          <button type="button" aria-checked="false" role="radio" aria-label="1 star" data-value="1" tabindex="0">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+            </svg>
+          </button>
+          <button type="button" aria-checked="false" role="radio" aria-label="2 stars" data-value="2" tabindex="-1">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+            </svg>
+          </button>
+          <button type="button" aria-checked="false" role="radio" aria-label="3 stars" data-value="3" tabindex="-1">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+            </svg>
+          </button>
+          <button type="button" aria-checked="false" role="radio" aria-label="4 stars" data-value="4" tabindex="-1">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+            </svg>
+          </button>
+          <button type="button" aria-checked="false" role="radio" aria-label="5 stars" data-value="5" tabindex="-1">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <label for="comment">Your Comment</label>
+        <textarea id="comment" name="comment" maxlength="250" placeholder="Write a short comment (optional)" aria-label="Your short comment"></textarea>
+
+        <button type="submit" aria-label="Submit Feedback">Submit Feedback</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="feedback-list-heading" class="card" role="region">
+      <h2 id="feedback-list-heading" class="feedback-title">All Feedback</h2>
+      <div class="average-rating" aria-live="polite" aria-atomic="true" aria-relevant="additions removals" role="status" tabindex="0">
+        <div>
+          <span class="average-score" id="averageScore" aria-label="Average rating">0.0</span><span class="slash">/5</span>
+        </div>
+        <div class="average-stars" aria-hidden="true" id="averageStars"></div>
+      </div>
+      <div class="feedback-list" id="feedbackList" aria-live="polite" aria-atomic="true" aria-relevant="additions removals" tabindex="0"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
